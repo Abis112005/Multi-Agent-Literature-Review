@@ -6,18 +6,37 @@ def search_papers(topic, max_results=10):
     """
     Search for research papers.
 
-    First tries OpenAlex.
-    If OpenAlex is rate-limited, automatically uses Semantic Scholar.
+    Tries OpenAlex first.
+    If OpenAlex fails, tries Semantic Scholar.
     """
 
+    # Try OpenAlex
     try:
-        return search_openalex(topic, max_results)
+        papers = search_openalex(topic, max_results)
+
+        if papers:
+            return papers
 
     except Exception as e:
-        print(f"OpenAlex search failed: {e}")
-        print("Trying Semantic Scholar...")
+        print(f"OpenAlex failed: {e}")
 
-        return search_semantic_scholar(topic, max_results)
+    # Try Semantic Scholar
+    try:
+        papers = search_semantic_scholar(topic, max_results)
+
+        if papers:
+            return papers
+
+    except Exception as e:
+        print(f"Semantic Scholar failed: {e}")
+
+    # Both sources failed
+    raise Exception(
+        "Unable to retrieve research papers at the moment. "
+        "Both OpenAlex and Semantic Scholar are unavailable. "
+        "Please try again after a few minutes."
+    )
+
 
 
 def search_openalex(topic, max_results):
