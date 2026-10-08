@@ -54,7 +54,7 @@ Do not invent information.
 """
 
     interaction = client.interactions.create(
-        model="gemini-3.6-flash",
+        model="gemini-3.8-flash",
         input=prompt
     )
 
