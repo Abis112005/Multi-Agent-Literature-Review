@@ -1,4 +1,6 @@
+```python
 import requests
+import time
 
 
 def search_papers(topic, max_results=10):
@@ -20,12 +22,43 @@ def search_papers(topic, max_results=10):
         "per-page": max_results
     }
 
-    response = requests.get(url, params=params, timeout=30)
+    # Retry the request if OpenAlex temporarily rate-limits us
+    max_retries = 3
 
-    # Check whether the API request was successful
-    response.raise_for_status()
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(
+                url,
+                params=params,
+                timeout=30,
+                headers={
+                    "User-Agent": "Multi-Agent-Literature-Review/1.0"
+                }
+            )
 
-    data = response.json()
+            if response.status_code == 429:
+                if attempt < max_retries - 1:
+                    wait_time = 5 * (attempt + 1)
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    raise Exception(
+                        "OpenAlex is currently rate-limiting requests. "
+                        "Please wait a few minutes and try again."
+                    )
+
+            response.raise_for_status()
+
+            data = response.json()
+            break
+
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1:
+                time.sleep(5)
+            else:
+                raise Exception(
+                    f"Unable to search OpenAlex after {max_retries} attempts: {e}"
+                )
 
     papers = []
 
@@ -63,6 +96,7 @@ def extract_abstract(work):
 
     return " ".join(word for position, word in words)
 
+
 if __name__ == "__main__":
     topic = "LiDAR 3D object detection in snowy weather"
 
@@ -75,3 +109,4 @@ if __name__ == "__main__":
         print(f"   Year: {paper['year']}")
         print(f"   DOI: {paper['doi']}")
         print()
+```
