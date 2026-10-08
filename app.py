@@ -27,7 +27,7 @@ if st.button("Start Literature Review"):
 
         with st.spinner("Search Agent is finding relevant papers..."):
 
-            papers = search_papers(topic, max_results=3)
+            papers = search_papers(topic, max_results=5)
 
         st.success(f"Search Agent found {len(papers)} papers!")
 
