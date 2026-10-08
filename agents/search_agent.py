@@ -1,42 +1,47 @@
 import requests
-import time
 
 
 def search_papers(topic, max_results=10):
     """
-    Search for research papers.
+    Search for research papers using multiple sources.
 
-    Tries OpenAlex first.
-    If OpenAlex fails, tries Semantic Scholar.
+    Order:
+    1. OpenAlex
+    2. Semantic Scholar
+    3. Crossref
     """
 
     # Try OpenAlex
     try:
         papers = search_openalex(topic, max_results)
-
         if papers:
+            print("Papers retrieved from OpenAlex.")
             return papers
-
     except Exception as e:
         print(f"OpenAlex failed: {e}")
 
     # Try Semantic Scholar
     try:
         papers = search_semantic_scholar(topic, max_results)
-
         if papers:
+            print("Papers retrieved from Semantic Scholar.")
             return papers
-
     except Exception as e:
         print(f"Semantic Scholar failed: {e}")
 
-    # Both sources failed
+    # Try Crossref
+    try:
+        papers = search_crossref(topic, max_results)
+        if papers:
+            print("Papers retrieved from Crossref.")
+            return papers
+    except Exception as e:
+        print(f"Crossref failed: {e}")
+
     raise Exception(
         "Unable to retrieve research papers at the moment. "
-        "Both OpenAlex and Semantic Scholar are unavailable. "
-        "Please try again after a few minutes."
+        "All paper search sources are unavailable."
     )
-
 
 
 def search_openalex(topic, max_results):
@@ -77,7 +82,7 @@ def search_openalex(topic, max_results):
 
 
 def search_semantic_scholar(topic, max_results):
-    """Search Semantic Scholar as a fallback."""
+    """Search Semantic Scholar."""
 
     url = "https://api.semanticscholar.org/graph/v1/paper/search"
 
@@ -116,6 +121,73 @@ def search_semantic_scholar(topic, max_results):
     return papers
 
 
+def search_crossref(topic, max_results):
+    """Search Crossref as the third fallback."""
+
+    url = "https://api.crossref.org/works"
+
+    params = {
+        "query.bibliographic": topic,
+        "rows": max_results,
+        "mailto": "azamabis829@gmail.com"
+    }
+
+    response = requests.get(
+        url,
+        params=params,
+        timeout=30,
+        headers={
+            "User-Agent": "Multi-Agent-Literature-Review/1.0"
+        }
+    )
+
+    response.raise_for_status()
+
+    data = response.json()
+
+    papers = []
+
+    for item in data.get("message", {}).get("items", []):
+        title_list = item.get("title", [])
+        title = title_list[0] if title_list else "Title not available"
+
+        authors = item.get("author", [])
+
+        abstract = item.get("abstract")
+
+        if abstract:
+            # Remove simple HTML/XML tags from Crossref abstracts
+            import re
+            abstract = re.sub("<[^>]+>", "", abstract)
+        else:
+            abstract = "Abstract not available"
+
+        papers.append({
+            "title": title,
+            "year": get_crossref_year(item),
+            "doi": item.get("DOI"),
+            "abstract": abstract,
+            "url": item.get("URL")
+        })
+
+    return papers
+
+
+def get_crossref_year(item):
+    """Get publication year from Crossref metadata."""
+
+    for field in ["published-print", "published-online", "issued", "created"]:
+        date_info = item.get(field)
+
+        if date_info:
+            date_parts = date_info.get("date-parts", [])
+
+            if date_parts and date_parts[0]:
+                return date_parts[0][0]
+
+    return None
+
+
 def extract_openalex_abstract(work):
     """Reconstruct abstract from OpenAlex inverted index."""
 
@@ -147,4 +219,5 @@ if __name__ == "__main__":
         print(f"   Year: {paper['year']}")
         print(f"   DOI: {paper['doi']}")
         print()
+
 
