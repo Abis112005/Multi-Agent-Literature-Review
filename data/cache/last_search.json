@@ -1,0 +1,117 @@
+{
+  "query": "LLM Multi-Agent Collaboration",
+  "count": 5,
+  "papers": [
+    {
+      "paper_id": "https://doi.org/10.52202/085713-0272",
+      "title": "GUARDIAN: Safeguarding LLM Multi-Agent Collaborations with Temporal Graph Modeling",
+      "authors": [
+        "Jialong Zhou",
+        "Lichao Wang",
+        "Xiao Yang"
+      ],
+      "publication_year": 2025,
+      "abstract": "The emergence of large language models (LLMs) enables the development of intelligent agents capable of engaging in complex and multi-turn dialogues. However, multi-agent collaboration faces critical safety challenges, such as hallucination amplification and error injection and propagation. This paper presents GUARDIAN, a unified method for detecting and mitigating multiple safety concerns in GUARDing Intelligent Agent collaboratioNs. By modeling the multi-agent collaboration process as a discrete-time temporal attributed graph, GUARDIAN explicitly captures the propagation dynamics of hallucinations and errors. The unsupervised encoder-decoder architecture incorporating an incremental training paradigm learns to reconstruct node attributes and graph structures from latent embeddings, enabling the identification of anomalous nodes and edges with unparalleled precision. Moreover, we introduce a graph abstraction mechanism based on the Information Bottleneck Theory, which compresses temporal interaction graphs while preserving essential patterns. Extensive experiments demonstrate GUARDIAN's effectiveness in safeguarding LLM multi-agent collaborations against diverse safety vulnerabilities, achieving state-of-the-art accuracy with efficient resource utilization. The code is available at https://github.com/JialongZhou666/GUARDIAN",
+      "doi": "https://doi.org/10.52202/085713-0272",
+      "url": "https://doi.org/10.52202/085713-0272",
+      "venue": "neural information processing systems",
+      "citation_count": 4,
+      "source": "openalex",
+      "relevance_score": 0.915,
+      "retrieved_at": "2026-10-21T10:41:58.774420+00:00",
+      "pdf_path": null,
+      "has_full_text": false
+    },
+    {
+      "paper_id": "https://doi.org/10.1109/icnp65844.2025.11192375",
+      "title": "Poster: LLM Multi-Agent Collaboration for Network Deployment and Management",
+      "authors": [
+        "Zhengyi Cheng",
+        "Chongxi Ma",
+        "Mingxuan Tang",
+        "Jie Xu",
+        "Quan Li",
+        "Long Luo",
+        "Hongfang Yu"
+      ],
+      "publication_year": 2025,
+      "abstract": "This paper presents the MAPLE framework, which harnesses large language models (LLMs) to facilitate multi-agent collaboration for fully automated deployment and management of large-scale networks. Within MAPLE, a supervisor agent interprets natural language instructions from users, orchestrates specialized agents to execute tasks, and validates outcomes through integration with a network simulation platform. Experimental findings show that MAPLE outperforms single-agent approaches in terms of success rates for topology deployment and service configuration. Moreover, experiments reveal that by adaptively employing LLMs with varying capabilities according to task requirements and inter-agent dependencies, the framework effectively balances task success rates with cost efficiency.",
+      "doi": "https://doi.org/10.1109/icnp65844.2025.11192375",
+      "url": "https://doi.org/10.1109/icnp65844.2025.11192375",
+      "venue": "Proceedings/Proceedings - International Conference on Network Protocols",
+      "citation_count": 1,
+      "source": "openalex",
+      "relevance_score": 0.905,
+      "retrieved_at": "2026-10-21T10:41:58.774420+00:00",
+      "pdf_path": null,
+      "has_full_text": false
+    },
+    {
+      "paper_id": "https://doi.org/10.48550/arxiv.2605.29313",
+      "title": "PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration",
+      "authors": [
+        "Shuyu Zhang",
+        "Yaqi Shi",
+        "Jiarui Zhang",
+        "Yanxiao Zhao",
+        "Lu Wang"
+      ],
+      "publication_year": 2026,
+      "abstract": "LLM multi-agent systems often coordinate through natural-language dialogue or loosely structured shared memory, making intermediate state difficult to validate, attribute, and audit. We introduce PatchBoard, a schema-grounded collaboration architecture that replaces inter-agent dialogue with validated JSON Patch mutations over a shared structured state. An Architect agent constructs a task-specific schema and workflow rules, while a deterministic kernel validates each proposed state mutation against schema constraints, role-specific write contracts, and runtime invariants before committing it transactionally. On 630 matched ALFWorld episodes, PatchBoard achieves an 84.6% success rate, compared with 30.8% for LangGraph and 61.6% for Flock, while reducing tokens per successful task to 45.5k, compared with 368.3k and 64.2k, respectively.",
+      "doi": "https://doi.org/10.48550/arxiv.2605.29313",
+      "url": "https://arxiv.org/abs/2605.29313",
+      "venue": "arXiv (Cornell University)",
+      "citation_count": 0,
+      "source": "openalex",
+      "relevance_score": 0.9,
+      "retrieved_at": "2026-10-21T10:41:58.774420+00:00",
+      "pdf_path": null,
+      "has_full_text": false
+    },
+    {
+      "paper_id": "https://openalex.org/W4414536845",
+      "title": "CausalPlan: Empowering Efficient LLM Multi-Agent Collaboration Through Causality-Driven Planning",
+      "authors": [
+        "Thin Nguyen",
+        "Van Dai Do",
+        "Dung Huu Nguyen",
+        "Thin Nguyen",
+        "Hung L\u00ea"
+      ],
+      "publication_year": 2025,
+      "abstract": "Large language model (LLM) agents-especially smaller, open-source models-often produce causally invalid or incoherent actions in collaborative tasks due to their reliance on surface-level correlations rather than grounded causal reasoning. This limitation undermines their performance in terms of coordination and planning in dynamic environments. We address this challenge with CausalPlan, a two-phase framework that integrates explicit structural causal reasoning into the LLM planning process. At the core of CausalPlan is the Structural Causal Action (SCA) model, which learns a causal graph from agent trajectories to capture how prior actions and current environment states influence future decisions. This structure is then used to guide action selection by assigning causal scores to LLM-generated proposals, reweighting them accordingly, or falling back to causally grounded alternatives when needed. By embedding this causal knowledge directly into the decision loop, CausalPlan constrains planning to intervention-consistent behaviours without requiring fine-tuning of the LLM itself. We evaluate CausalPlan on the Overcooked-AI benchmark across five multi-agent coordination tasks and four LLMs of varying sizes: Gemma-7B, Llama-8B, Qwen-14B, and Llama-70B. Experimental results show that CausalPlan consistently reduces invalid actions and improves collaboration in both AI-AI and human-AI settings, outperforming strong reinforcement learning baselines. Our findings highlight the value of causality-driven planning for deploying efficient, interpretable, and generalisable multi-agent LLM systems.",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2508.13721",
+      "venue": "arXiv (Cornell University)",
+      "citation_count": 0,
+      "source": "openalex",
+      "relevance_score": 0.895,
+      "retrieved_at": "2026-10-21T10:41:58.774420+00:00",
+      "pdf_path": null,
+      "has_full_text": false
+    },
+    {
+      "paper_id": "https://doi.org/10.48550/arxiv.2408.08902",
+      "title": "Audit-LLM: Multi-Agent Collaboration for Log-based Insider Threat Detection",
+      "authors": [
+        "Chengyu Song",
+        "Linru Ma",
+        "Zheng, Jianming",
+        "Jinzhi Liao",
+        "Kuang, Hongyu",
+        "Lin Yang"
+      ],
+      "publication_year": 2024,
+      "abstract": "Log-based insider threat detection (ITD) detects malicious user activities by auditing log entries. Recently, large language models (LLMs) with strong common sense knowledge have emerged in the domain of ITD. Nevertheless, diverse activity types and overlong log files pose a significant challenge for LLMs in directly discerning malicious ones within myriads of normal activities. Furthermore, the faithfulness hallucination issue from LLMs aggravates its application difficulty in ITD, as the generated conclusion may not align with user commands and activity context. In response to these challenges, we introduce Audit-LLM, a multi-agent log-based insider threat detection framework comprising three collaborative agents: (i) the Decomposer agent, breaking down the complex ITD task into manageable sub-tasks using Chain-of-Thought (COT) reasoning;(ii) the Tool Builder agent, creating reusable tools for sub-tasks to overcome context length limitations in LLMs; and (iii) the Executor agent, generating the final detection conclusion by invoking constructed tools. To enhance conclusion accuracy, we propose a pair-wise Evidence-based Multi-agent Debate (EMAD) mechanism, where two independent Executors iteratively refine their conclusions through reasoning exchange to reach a consensus. Comprehensive experiments conducted on three publicly available ITD datasets-CERT r4.2, CERT r5.2, and PicoDomain-demonstrate the superiority of our method over existing baselines and show that the proposed EMAD significantly improves the faithfulness of explanations generated by LLMs.",
+      "doi": "https://doi.org/10.48550/arxiv.2408.08902",
+      "url": "http://arxiv.org/abs/2408.08902",
+      "venue": "arXiv (Cornell University)",
+      "citation_count": 2,
+      "source": "openalex",
+      "relevance_score": 0.834,
+      "retrieved_at": "2026-10-21T10:41:58.774420+00:00",
+      "pdf_path": null,
+      "has_full_text": false
+    }
+  ]
+}

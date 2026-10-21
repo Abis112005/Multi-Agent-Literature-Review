@@ -1,0 +1,67 @@
+[
+  {
+    "paper_id": "arxiv:2308.00352",
+    "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+    "authors": ["Sirui Hong", "Mingchen Zhuge", "Jonathan Chen", "Xiawu Zheng", "Cheng Gao", "Ceyao Zhang", "Jinlin Wang", "Zili Wang", "Steven Hoi", "Chenglin Wu"],
+    "publication_year": 2023,
+    "abstract": "Remarkable progress has been made on automated problem solving powered by Large Language Model (LLM) multi-agent systems. However, existing multi-agent systems often suffer from cascading hallucination and disordered communication when applied to complex real-world software engineering tasks. In this work, we propose MetaGPT, a meta-programming framework that incorporates Standardized Operating Procedures (SOPs) into LLM-based multi-agent collaboration. MetaGPT assigns role-based agents (e.g., Product Manager, Architect, Project Manager, Engineer, QA) and standardizes intermediate outputs into structured documents and diagrams. Extensive experiments on HumanEval and SoftwareDev benchmarks show that MetaGPT achieves state-of-the-art performance in code generation and software development while reducing disordered dialogue. Limitations include dependency on commercial LLM reasoning capabilities and challenges in handling dynamic runtime execution errors.",
+    "doi": "10.48550/arXiv.2308.00352",
+    "url": "https://arxiv.org/abs/2308.00352",
+    "venue": "arXiv preprint / ICLR 2024",
+    "citation_count": 850,
+    "source": "sample",
+    "relevance_score": 0.95
+  },
+  {
+    "paper_id": "arxiv:2307.07924",
+    "title": "Communicative Agents for Software Development",
+    "authors": ["Chen Qian", "Xin Cong", "Cheng Yang", "Weize Chen", "Yusheng Su", "Jinhao Xu", "Jiahao Li", "Yufan Dang", "Zhiyuan Liu", "Maosong Sun"],
+    "publication_year": 2023,
+    "abstract": "Software engineering is a complex human activity characterized by rigid workflows, code dependency structures, and iterative debugging. We present ChatDev, a virtual chat-powered software development company that uses communicative LLM agents to perform requirements analysis, system design, coding, testing, and documentation. ChatDev employs a waterfall-inspired chat chain where agents engage in multi-turn dialogues to make decisions and generate code. Evaluation on customized task sets demonstrates that ChatDev completes typical small software engineering tasks within seven minutes at a cost of less than one dollar. However, the framework struggles with large-scale codebase maintenance, architectural scaling, and subtle algorithmic edge-case verification without interactive human-in-the-loop debugging.",
+    "doi": "10.48550/arXiv.2307.07924",
+    "url": "https://arxiv.org/abs/2307.07924",
+    "venue": "ACL 2024",
+    "citation_count": 620,
+    "source": "sample",
+    "relevance_score": 0.92
+  },
+  {
+    "paper_id": "arxiv:2303.17760",
+    "title": "CAMEL: Communicative Agents for 'Mind' Exploration of Large Scale Language Model Society",
+    "authors": ["Guohao Li", "Hasan Abed Al Kader Hammoud", "Hani Itani", "Dmytro Khizbullin", "Bernard Ghanem"],
+    "publication_year": 2023,
+    "abstract": "Autonomous cooperative agents have shown great potential in problem solving using large language models. However, guiding autonomous communicative agents toward achieving designated task goals without human intervention remains challenging due to conversation stagnation and role flipping. We introduce CAMEL, a novel communicative agent framework based on inception prompting that guides cooperative chat between two agents (an AI user and an AI assistant) toward goal completion. We generate synthetic communicative agent datasets across 20 distinct domains. Experiments demonstrate the feasibility of multi-agent cooperative dialogue, but reveal critical limitations in agent hallucination, task drift during long conversational trajectories, and lack of ground-truth environment feedback.",
+    "doi": "10.48550/arXiv.2303.17760",
+    "url": "https://arxiv.org/abs/2303.17760",
+    "venue": "NeurIPS 2023",
+    "citation_count": 910,
+    "source": "sample",
+    "relevance_score": 0.89
+  },
+  {
+    "paper_id": "arxiv:2305.16291",
+    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "authors": ["Guanzhi Wang", "Yuqi Xie", "Yunfan Jiang", "Ajay Mandlekar", "Chaowei Xiao", "Yuke Zhu", "Linxi Fan", "Anima Anandkumar"],
+    "publication_year": 2023,
+    "abstract": "Building lifelong learning embodied agents that continuously explore, plan, and acquire novel skills in open-ended worlds is an active frontier in artificial intelligence. We introduce Voyager, an LLM-powered embodied lifelong learning agent in Minecraft that plays without human intervention. Voyager consists of three key components: an automatic curriculum that maximizes exploration, an executable skill library for storing complex behaviors, and an iterative prompting mechanism incorporating environmental feedback and error reflection. Extensive empirical evaluations demonstrate Voyager acquires 3.3x more unique items and unlocks the tech tree 15x faster than prior methods. However, the system suffers from significant API latency, high token costs, and failures when adapting to dynamic, real-time combat scenarios requiring sub-second reactions.",
+    "doi": "10.48550/arXiv.2305.16291",
+    "url": "https://arxiv.org/abs/2305.16291",
+    "venue": "arXiv preprint",
+    "citation_count": 780,
+    "source": "sample",
+    "relevance_score": 0.87
+  },
+  {
+    "paper_id": "openalex:W4386711438",
+    "title": "A Survey on Large Language Model based Autonomous Agents",
+    "authors": ["Lei Wang", "Chensheng Wu", "Zhiyuan Liu", "Ji-Rong Wen", "Yanyan Lan"],
+    "publication_year": 2024,
+    "abstract": "Autonomous agents powered by Large Language Models have drawn immense attention across academic and industrial research. This survey provides a systematic review of LLM-based autonomous agent architectures, covering profiling, memory, planning, and action modules. We review single-agent and multi-agent interaction paradigms, collaborative mechanisms, and benchmark environments. Our analysis identifies prominent open challenges: hallucination accumulation in multi-step planning, computational overhead of multi-agent communication rounds, scarcity of standardized evaluation benchmarks, and ethical safety concerns during autonomous tool invocation.",
+    "doi": "10.1007/s11704-024-40231-1",
+    "url": "https://doi.org/10.1007/s11704-024-40231-1",
+    "venue": "Frontiers of Computer Science",
+    "citation_count": 450,
+    "source": "sample",
+    "relevance_score": 0.94
+  }
+]

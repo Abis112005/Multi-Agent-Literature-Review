@@ -1,0 +1,194 @@
+[
+  {
+    "paper_id": "https://doi.org/10.52202/085713-0272",
+    "paper_title": "GUARDIAN: Safeguarding LLM Multi-Agent Collaborations with Temporal Graph Modeling",
+    "source_url": "https://doi.org/10.52202/085713-0272",
+    "research_problem": "However, multi-agent collaboration faces critical safety challenges, such as hallucination amplification and error injection and propagation.",
+    "research_objectives": [
+      "Moreover, we introduce a graph abstraction mechanism based on the Information Bottleneck Theory, which compresses temporal interaction graphs while preserving essential patterns."
+    ],
+    "proposed_methodology": "Not reported in the available text.",
+    "algorithms_and_models": [
+      "LLM"
+    ],
+    "datasets_used": [
+      "GitHub"
+    ],
+    "evaluation_metrics": [
+      "ACCURACY",
+      "PRECISION"
+    ],
+    "main_findings": [
+      "The code is available at https://github.com/JialongZhou666/GUARDIAN"
+    ],
+    "limitations": [
+      "However, multi-agent collaboration faces critical safety challenges, such as hallucination amplification and error injection and propagation.",
+      "Moreover, we introduce a graph abstraction mechanism based on the Information Bottleneck Theory, which compresses temporal interaction graphs while preserving essential patterns."
+    ],
+    "future_research_directions": [
+      "Not reported in the available text."
+    ],
+    "analysis_mode": "heuristic_nlp",
+    "confidence_score": 0.75,
+    "is_full_text_used": false,
+    "raw_evidence_excerpts": {
+      "title": "GUARDIAN: Safeguarding LLM Multi-Agent Collaborations with Temporal Graph Modeling",
+      "abstract_snippet": "The emergence of large language models (LLMs) enables the development of intelligent agents capable of engaging in complex and multi-turn dialogues. However, multi-agent collaboration faces critical safety challenges, such as hallucination amplification and error injection and propagation. This paper presents GUARDIAN, a unified method for detecting and mitigating multiple safety concerns in GUARD",
+      "text_source": "abstract",
+      "source_url": "https://doi.org/10.52202/085713-0272"
+    }
+  },
+  {
+    "paper_id": "https://doi.org/10.1109/icnp65844.2025.11192375",
+    "paper_title": "Poster: LLM Multi-Agent Collaboration for Network Deployment and Management",
+    "source_url": "https://doi.org/10.1109/icnp65844.2025.11192375",
+    "research_problem": "This paper presents the MAPLE framework, which harnesses large language models (LLMs) to facilitate multi-agent collaboration for fully automated deployment and management of large-scale networks.",
+    "research_objectives": [
+      "Not reported in the available text."
+    ],
+    "proposed_methodology": "Not reported in the available text.",
+    "algorithms_and_models": [
+      "Not reported in the available text."
+    ],
+    "datasets_used": [
+      "Not reported in the available text."
+    ],
+    "evaluation_metrics": [
+      "Not reported in the available text."
+    ],
+    "main_findings": [
+      "Experimental findings show that MAPLE outperforms single-agent approaches in terms of success rates for topology deployment and service configuration."
+    ],
+    "limitations": [
+      "Not reported in the available text."
+    ],
+    "future_research_directions": [
+      "Not reported in the available text."
+    ],
+    "analysis_mode": "heuristic_nlp",
+    "confidence_score": 0.75,
+    "is_full_text_used": false,
+    "raw_evidence_excerpts": {
+      "title": "Poster: LLM Multi-Agent Collaboration for Network Deployment and Management",
+      "abstract_snippet": "This paper presents the MAPLE framework, which harnesses large language models (LLMs) to facilitate multi-agent collaboration for fully automated deployment and management of large-scale networks. Within MAPLE, a supervisor agent interprets natural language instructions from users, orchestrates specialized agents to execute tasks, and validates outcomes through integration with a network simulatio",
+      "text_source": "abstract",
+      "source_url": "https://doi.org/10.1109/icnp65844.2025.11192375"
+    }
+  },
+  {
+    "paper_id": "https://doi.org/10.48550/arxiv.2605.29313",
+    "paper_title": "PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration",
+    "source_url": "https://arxiv.org/abs/2605.29313",
+    "research_problem": "LLM multi-agent systems often coordinate through natural-language dialogue or loosely structured shared memory, making intermediate state difficult to validate, attribute, and audit.",
+    "research_objectives": [
+      "We introduce PatchBoard, a schema-grounded collaboration architecture that replaces inter-agent dialogue with validated JSON Patch mutations over a shared structured state."
+    ],
+    "proposed_methodology": "Not reported in the available text.",
+    "algorithms_and_models": [
+      "LLM"
+    ],
+    "datasets_used": [
+      "Not reported in the available text."
+    ],
+    "evaluation_metrics": [
+      "Not reported in the available text."
+    ],
+    "main_findings": [
+      "On 630 matched ALFWorld episodes, PatchBoard achieves an 84.6% success rate, compared with 30.8% for LangGraph and 61.6% for Flock, while reducing tokens per successful task to 45.5k, compared with 368.3k and 64.2k, respectively."
+    ],
+    "limitations": [
+      "Not reported in the available text."
+    ],
+    "future_research_directions": [
+      "Not reported in the available text."
+    ],
+    "analysis_mode": "heuristic_nlp",
+    "confidence_score": 0.75,
+    "is_full_text_used": false,
+    "raw_evidence_excerpts": {
+      "title": "PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration",
+      "abstract_snippet": "LLM multi-agent systems often coordinate through natural-language dialogue or loosely structured shared memory, making intermediate state difficult to validate, attribute, and audit. We introduce PatchBoard, a schema-grounded collaboration architecture that replaces inter-agent dialogue with validated JSON Patch mutations over a shared structured state. An Architect agent constructs a task-specifi",
+      "text_source": "abstract",
+      "source_url": "https://arxiv.org/abs/2605.29313"
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W4414536845",
+    "paper_title": "CausalPlan: Empowering Efficient LLM Multi-Agent Collaboration Through Causality-Driven Planning",
+    "source_url": "http://arxiv.org/abs/2508.13721",
+    "research_problem": "Large language model (LLM) agents-especially smaller, open-source models-often produce causally invalid or incoherent actions in collaborative tasks due to their reliance on surface-level correlations rather than grounded causal reasoning.",
+    "research_objectives": [
+      "Not reported in the available text."
+    ],
+    "proposed_methodology": "Not reported in the available text.",
+    "algorithms_and_models": [
+      "LLM",
+      "Large Language Model",
+      "Llama",
+      "Reinforcement Learning",
+      "Fine-Tuning"
+    ],
+    "datasets_used": [
+      "Overcooked-AI"
+    ],
+    "evaluation_metrics": [
+      "Not reported in the available text."
+    ],
+    "main_findings": [
+      "Experimental results show that CausalPlan consistently reduces invalid actions and improves collaboration in both AI-AI and human-AI settings, outperforming strong reinforcement learning baselines."
+    ],
+    "limitations": [
+      "This limitation undermines their performance in terms of coordination and planning in dynamic environments."
+    ],
+    "future_research_directions": [
+      "Not reported in the available text."
+    ],
+    "analysis_mode": "heuristic_nlp",
+    "confidence_score": 0.75,
+    "is_full_text_used": false,
+    "raw_evidence_excerpts": {
+      "title": "CausalPlan: Empowering Efficient LLM Multi-Agent Collaboration Through Causality-Driven Planning",
+      "abstract_snippet": "Large language model (LLM) agents-especially smaller, open-source models-often produce causally invalid or incoherent actions in collaborative tasks due to their reliance on surface-level correlations rather than grounded causal reasoning. This limitation undermines their performance in terms of coordination and planning in dynamic environments. We address this challenge with CausalPlan, a two-pha",
+      "text_source": "abstract",
+      "source_url": "http://arxiv.org/abs/2508.13721"
+    }
+  },
+  {
+    "paper_id": "https://doi.org/10.48550/arxiv.2408.08902",
+    "paper_title": "Audit-LLM: Multi-Agent Collaboration for Log-based Insider Threat Detection",
+    "source_url": "http://arxiv.org/abs/2408.08902",
+    "research_problem": "Log-based insider threat detection (ITD) detects malicious user activities by auditing log entries.",
+    "research_objectives": [
+      "In response to these challenges, we introduce Audit-LLM, a multi-agent log-based insider threat detection framework comprising three collaborative agents: (i) the Decomposer agent, breaking down the complex ITD task into manageable sub-tasks using Chain-of-Thought (COT) reasoning;(ii) the Tool Builder agent, creating reusable tools for sub-tasks to overcome context length limitations in LLMs; and (iii) the Executor agent, generating the final detection conclusion by invoking constructed tools."
+    ],
+    "proposed_methodology": "To enhance conclusion accuracy, we propose a pair-wise Evidence-based Multi-agent Debate (EMAD) mechanism, where two independent Executors iteratively refine their conclusions through reasoning exchange to reach a consensus.",
+    "algorithms_and_models": [
+      "LLM",
+      "Chain-of-Thought"
+    ],
+    "datasets_used": [
+      "ITD"
+    ],
+    "evaluation_metrics": [
+      "ACCURACY"
+    ],
+    "main_findings": [
+      "Comprehensive experiments conducted on three publicly available ITD datasets-CERT r4.2, CERT r5.2, and PicoDomain-demonstrate the superiority of our method over existing baselines and show that the proposed EMAD significantly improves the faithfulness of explanations generated by LLMs."
+    ],
+    "limitations": [
+      "Not reported in the available text."
+    ],
+    "future_research_directions": [
+      "Not reported in the available text."
+    ],
+    "analysis_mode": "heuristic_nlp",
+    "confidence_score": 0.75,
+    "is_full_text_used": false,
+    "raw_evidence_excerpts": {
+      "title": "Audit-LLM: Multi-Agent Collaboration for Log-based Insider Threat Detection",
+      "abstract_snippet": "Log-based insider threat detection (ITD) detects malicious user activities by auditing log entries. Recently, large language models (LLMs) with strong common sense knowledge have emerged in the domain of ITD. Nevertheless, diverse activity types and overlong log files pose a significant challenge for LLMs in directly discerning malicious ones within myriads of normal activities. Furthermore, the f",
+      "text_source": "abstract",
+      "source_url": "http://arxiv.org/abs/2408.08902"
+    }
+  }
+]

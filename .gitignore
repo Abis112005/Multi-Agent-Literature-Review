@@ -1,0 +1,25 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Sensitive environment credentials
+.env
+
+# Data caches and transient files (keep directory structure with sample)
+data/cache/*
+!data/cache/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+data/papers/*
+!data/papers/.gitkeep
+
+# IDE configs
+.vscode/
+.idea/
